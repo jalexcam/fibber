@@ -71,7 +71,7 @@ class Container
      */
     public function __construct(bool $shouldBuildContainerMixin = true)
     {
-        if ( ! $this->areExtensionsInitialized()) {
+        if ( ! $this->areOptionsInitialized()) {
             $this->registerConfiguredProviders();
 
             $this->bootstrap();

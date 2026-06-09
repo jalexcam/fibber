@@ -58,7 +58,7 @@ class ContainerMixinManifest
      * @param  string  $basePath
      * @param  string|null  $containerMixinPath
      * 
-     * return void
+     * @return void
      */
     public function __construct(string $basePath, ?string $containerMixinPath = null)
     {
@@ -173,7 +173,7 @@ class ContainerMixinManifest
 
         file_put_contents(
             $this->containerMixinPath,
-            "<?php namespace Jalexcam\\Fibber\\Container{\n{$docComment}\n\tclass ContainerMixin{}"
+             "<?php namespace Jalexcam\\Fibber\\Container;\n{$docComment}\n\tclass Container{}"
         );
     }
 }

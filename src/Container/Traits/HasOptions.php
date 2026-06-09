@@ -24,7 +24,7 @@ use ReflectionClass;
 use Jalexcam\Fibber\Container\Container;
 use Jalexcam\Fibber\Exceptions\NoOptionLocaleFoundException;
 use Jalexcam\Fibber\Options\Option;
-use Jalexcam\Options\Traits\HasLocale;
+use Jalexcam\Fibber\Container\Traits\HasLocale;
 use Jalexcam\Fibber\Container\Enum\Locales;
 
 /**
