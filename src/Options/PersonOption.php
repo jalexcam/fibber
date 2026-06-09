@@ -18,7 +18,7 @@
 
 namespace Jalexcam\Fibber\Options;
 
-use Jalexcam\Options\Traits\HasLocale;
+use Jalexcam\Fibber\Options\Traits\HasLocale;
 
 /**
  * Allows return values ​​about a person's first and last name.

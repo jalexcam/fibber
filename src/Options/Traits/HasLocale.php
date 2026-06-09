@@ -16,7 +16,7 @@
  * @license     https://opensource.org/licenses/BSD-3-Clause New BSD license or see https://fibberpackage.com/license
  */
 
-namespace Jalexcam\Options\Traits;
+namespace Jalexcam\Fibber\Options\Traits;
 
 use Jalexcam\Fibber\Container\Enum\Locales;
 
