@@ -29,7 +29,5 @@
 				"Jalexcam\\Fibber\\FibberServiceProvider"
 			]
 	    }
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true
+	}
 }
