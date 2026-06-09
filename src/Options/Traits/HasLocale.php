@@ -9,9 +9,6 @@
  * with this package in the file license.md.
  * It is also available through the world-wide-web at this URL:
  * https://fibberpackage.com/license
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@Lenevor.com so we can send you a copy immediately.
  *
  * @package     Fibber
  * @link        https://fibberpackage.com
@@ -19,7 +16,9 @@
  * @license     https://opensource.org/licenses/BSD-3-Clause New BSD license or see https://fibberpackage.com/license
  */
 
-namespace Lenevor\Options\Traits;
+namespace Jalexcam\Options\Traits;
+
+use Jalexcam\Fibber\Container\Enum\Locales;
 
 /**
  * Trait allow has locale.
@@ -29,10 +28,10 @@ trait HasLocale
     /**
      * The extension locale (BCP 47 Code).
      *
-     * @return string | null
+     * @return string|null
      */
-    public function getLocale(): string|null
+    public function getLocale(): ?string
     {
-        return null;
+        return Locales::DEFAULT;
     }
 }

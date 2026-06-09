@@ -9,9 +9,6 @@
  * with this package in the file license.md.
  * It is also available through the world-wide-web at this URL:
  * https://fibberpackage.com/license
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@Lenevor.com so we can send you a copy immediately.
  *
  * @package     Fibber
  * @link        https://fibberpackage.com
@@ -19,7 +16,7 @@
  * @license     https://opensource.org/licenses/BSD-3-Clause New BSD license or see https://fibberpackage.com/license
  */
 
-namespace Lenevor\Fibber\Exceptions;
+namespace Jalexcam\Fibber\Exceptions;
 
 use Throwable;
 use RuntimeException;
