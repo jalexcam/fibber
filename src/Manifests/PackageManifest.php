@@ -134,8 +134,8 @@ class PackageManifest
         $packagesToProvide = [];
 
         foreach ($packages as $package) {
-            if (isset($package['extra']['faker'])) {
-                $packagesToProvide[$package['name']] = $package['extra']['faker'];
+            if (isset($package['extra']['fibber'])) {
+                $packagesToProvide[$package['name']] = $package['extra']['fibber'];
             }
         }
 
