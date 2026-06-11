@@ -20,13 +20,6 @@
             "Jalexcam\\Fibber\\": "src/"
         }
     },
-    "extra": {
-        "fibber": {
-			"providers": [
-				"Jalexcam\\Fibber\\FibberServiceProvider"
-			]
-	    }
-	},
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
