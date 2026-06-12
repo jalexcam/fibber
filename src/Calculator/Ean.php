@@ -33,7 +33,7 @@ class Ean
     /**
      * Gets the checksum of an EAN number.
      * 
-     * @param  string  $digits
+     * @param string $digits
      *
      * @return int
      */
@@ -54,7 +54,7 @@ class Ean
      * Checks whether the provided number is an EAN compliant number and that
      * the checksum is correct.
      *
-     * @param  string  $ean 
+     * @param string $ean 
      *
      * @return bool
      */

@@ -33,7 +33,7 @@ class Isbn
     /**
      * Get the ISBN-10 check digit.
      *
-     * @param  string  $input ISBN without check-digit
+     * @param string $input ISBN without check-digit
      * 
      * @return string
      *
@@ -65,7 +65,7 @@ class Isbn
     /**
      * Checks whether the provided number is a valid ISBN-10 number.
      *
-     * @param  string  $isbn  ISBN to check
+     * @param string $isbn  ISBN to check
      * 
      * @return bool
      */
