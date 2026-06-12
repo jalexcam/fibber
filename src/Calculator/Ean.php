@@ -40,6 +40,7 @@ class Ean
     public static function checksum(string $digits): int
     {
         $sequence = (strlen($digits) + 1) === 8 ? [3, 1] : [1, 3];
+        
         $sums = 0;
 
         foreach (str_split($digits) as $n => $digit) {
