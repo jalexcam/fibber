@@ -57,4 +57,28 @@ class Generator
     {
         $this->container = $container ?: Container\ContainerFactory::withDefaultOptions()->build();
     }
+
+    /**
+     * Adds the providers.
+     * 
+     * @param array $provider
+     * 
+     * @return mixed
+     */
+    public function addProvider($provider)
+    {
+        array_unshift($this->providers, $provider);
+
+        $this->formatters = [];
+    }
+
+    /**
+     * Get all the providers.
+     * 
+     * @return array
+     */
+    public function getProviders(): array
+    {
+        return $this->providers;
+    }
 }
