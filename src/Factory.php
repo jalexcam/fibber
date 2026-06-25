@@ -90,7 +90,7 @@ class Factory
      */
     protected static function findProviderClassname($provider, $locale = '')
     {
-        $providerClass = 'Fibber\\' . ($locale ? sprintf('Provider\%s\%s', $locale, $provider) : sprintf('Provider\%s', $provider));
+        $providerClass = 'Fibber\\'.($locale ? sprintf('Provider\%s\%s', $locale, $provider) : sprintf('Provider\Options\%s', $provider));
 
         if (class_exists($providerClass, true)) {
             return $providerClass;
