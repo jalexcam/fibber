@@ -30,7 +30,7 @@ final class ContainerFactory
      * 
      * @var array<string, callable|object|string>
      */
-    protected array $definitions;
+    protected array $definitions = [];
 
     /**
      * Adds an id for choose a key the list of definitions.

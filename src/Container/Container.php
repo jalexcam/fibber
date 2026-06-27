@@ -34,7 +34,7 @@ final class Container implements ContainerInterface
      * 
      * @var array<string, callable|object|string>
      */
-    protected array $definitions;
+    protected array $definitions = [];
 
     /**
      * Get all the services.
