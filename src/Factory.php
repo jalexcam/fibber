@@ -41,7 +41,7 @@ class Factory
      *
      * @return Generator
      */
-    public static function create($locale = self::DEFAULT_LOCALE)
+    public static function create($locale = self::DEFAULT_LOCALE): Generator
     {
         $generator = new Generator();
 
@@ -88,7 +88,7 @@ class Factory
      *
      * @return string|null
      */
-    protected static function findProviderClassname($provider, $locale = '')
+    protected static function findProviderClassname($provider, $locale = ''): string|null
     {
         $providerClass = 'Fibber\\'.($locale ? sprintf('Provider\Locales\%s\%s', $locale, $provider) : sprintf('Provider\Options\%s', $provider));
 
