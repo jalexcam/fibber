@@ -18,7 +18,6 @@
 
 namespace Fibber\Provider\Options;
 
-use ReflectionClass;
 use Fibber\Generator;
 
 /**
@@ -26,6 +25,11 @@ use Fibber\Generator;
  */
 class Base
 {
+    /**
+     * Get the generator.
+     * 
+     * @var Generator
+     */
     protected Generator $generator;
 
     /**
@@ -38,22 +42,5 @@ class Base
     public function __construct(Generator $generator)
     {
         $this->generator = $generator;
-    }
-
-    /**
-     * Returns the extension name.
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return
-            strtolower(
-                preg_replace(
-                    '/([a-z])([A-Z])/',
-                    '$1-$2',
-                    (new ReflectionClass($this))->getShortName()
-                )
-            );
     }
 }
