@@ -84,17 +84,19 @@ class Generator
     }
 
     /**
+     * Get the option from the given an id.
+     * 
      * @param string $id
      *
      * @throws \Fibber\Exception\NotFoundContainerException
      *
      * @return mixed
      */
-    public function ext(string $id)
+    public function option(string $id)
     {
         if ( ! $this->container->has($id)) {
             throw new Exception\NotFoundContainerException(sprintf(
-                'No Fibber extension with id "%s" was loaded.',
+                'No Fibber option with id "%s" was loaded.',
                 $id,
             ));
         }
@@ -105,9 +107,11 @@ class Generator
     }
 
     /**
+     * Get the formatter.
+     * 
      * @param string $format
      *
-     * @return callable
+     * @return callable|string
      */
     public function getFormatter($format)
     {
@@ -121,9 +125,8 @@ class Generator
             return $this->formatters[$format];
         }
 
-        // "Faker\Core\Barcode->ean13"
         if (preg_match('|^([a-zA-Z0-9\\\]+)->([a-zA-Z0-9]+)$|', $format, $matches)) {
-            $this->formatters[$format] = [$this->ext($matches[1]), $matches[2]];
+            $this->formatters[$format] = [$this->option($matches[1]), $matches[2]];
 
             return $this->formatters[$format];
         }
@@ -155,33 +158,60 @@ class Generator
         return preg_replace_callback('/{{\s?(\w+|[\w\\\]+->\w+?)\s?}}/u', $callback, $string);
     }
 
+    /**
+     * Calls a type of format also, if exists arguments. 
+     * 
+     * @param string $format
+     * @param array $arguments
+     * 
+     * @return mixed
+     */
     public function format($format, $arguments = [])
     {
         return call_user_func_array($this->getFormatter($format), $arguments);
     }
-
-     /**
+    
+    /**
+     * Magic method.
+     * 
+     * Dynamically access route parameters.
+     * 
      * @param string $attribute
      *
      * @deprecated Use a method instead.
+     * 
+     * @return mixed
      */
     public function __get($attribute)
     {
-        trigger_deprecation('jalexcam/fibber', '1.0', 'Accessing property "%s" is deprecated, use "%s()" instead.', $attribute, $attribute);
+        trigger_deprecation('fibber', '1.0', 'Accessing property "%s" is deprecated, use "%s()" instead.', $attribute, $attribute);
 
         return $this->format($attribute);
     }
 
     /**
+     * Magic method.
+     * 
+     * Dynamically handle calls into the generator instance.
+     * 
      * @param string $method
      * @param array  $attributes
+     * 
+     * @return mixed
      */
     public function __call($method, $attributes)
     {
         return $this->format($method, $attributes);
     }
 
-    public function __wakeup()
+    /**
+     * Magic method.
+     * 
+     * For the reinitialization of the formatters.
+     * 
+     * @return void
+     */
+    public function __wakeup(): void
     {
         $this->formatters = [];
     }

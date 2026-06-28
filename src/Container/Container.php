@@ -18,11 +18,11 @@
 
 namespace Fibber\Container;
 
-use Fibber\Container\Exception\ContainerException;
-use Throwable;
-use Fibber\Container\Exception\NotFoundContainerException;
+use Fibber\Exception\ContainerException;
+use Fibber\Exception\NotFoundContainerException;
 use InvalidArgumentException;
 use RuntimeException;
+use Throwable;
 
 /**
  * Allows a simple implementation of a container.
