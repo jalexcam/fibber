@@ -42,8 +42,7 @@ class Person extends Base implements PersonOption
     /**
      * Get the name of a person.
      * 
-     * @param string|null $gender 
-     *
+     * @param  string|null  $gender 
      * @return string
      */
     public function name(?string $gender = null): string
@@ -54,8 +53,7 @@ class Person extends Base implements PersonOption
     /**
      * Get the first name of a person.
      * 
-     * @param string|null $gender 
-     *
+     * @param  string|null  $gender 
      * @return string
      */
     public function firstName(?string $gender = null): string
@@ -96,8 +94,7 @@ class Person extends Base implements PersonOption
     /**
      * Get the title.
      *
-     * @param string|null $gender
-     * 
+     * @param  string|null  $gender
      * @return string
      */
     public function title(?string $gender = null): string

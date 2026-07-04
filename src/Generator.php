@@ -50,8 +50,7 @@ class Generator
     /**
      * Constructor. Create a new Generator instance.
      * 
-     * @param ContainerInterface|null $container
-     * 
+     * @param  ContainerInterface|null  $container
      * @return void
      */
     public function __construct(?ContainerInterface $container = null)
@@ -86,11 +85,11 @@ class Generator
     /**
      * Get the option from the given an id.
      * 
-     * @param string $id
+     * @param  string  $id
+     * @return mixed
      *
      * @throws \Fibber\Exception\NotFoundContainerException
      *
-     * @return mixed
      */
     public function option(string $id)
     {
@@ -109,8 +108,7 @@ class Generator
     /**
      * Get the formatter.
      * 
-     * @param string $format
-     *
+     * @param  string  $format
      * @return callable|string
      */
     public function getFormatter($format)
@@ -145,8 +143,7 @@ class Generator
     /**
      * Replaces tokens ('{{ tokenName }}') with the result from the token method call
      *
-     * @param string $string String that needs to bet parsed
-     *
+     * @param  string  $string  String that needs to bet parsed
      * @return string
      */
     public function parse($string)
@@ -161,9 +158,8 @@ class Generator
     /**
      * Calls a type of format also, if exists arguments. 
      * 
-     * @param string $format
-     * @param array $arguments
-     * 
+     * @param  string  $format
+     * @param  array  $arguments
      * @return mixed
      */
     public function format($format, $arguments = [])
@@ -176,11 +172,10 @@ class Generator
      * 
      * Dynamically access route parameters.
      * 
-     * @param string $attribute
-     *
-     * @deprecated Use a method instead.
-     * 
+     * @param  string  $attribute
      * @return mixed
+     * 
+     * @deprecated  Use a method instead.
      */
     public function __get($attribute)
     {
@@ -194,9 +189,8 @@ class Generator
      * 
      * Dynamically handle calls into the generator instance.
      * 
-     * @param string $method
-     * @param array  $attributes
-     * 
+     * @param  string  $method
+     * @param  array  $attributes 
      * @return mixed
      */
     public function __call($method, $attributes)

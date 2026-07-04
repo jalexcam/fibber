@@ -26,8 +26,7 @@ class Iban
     /**
      * Generates IBAN Checksum.
      * 
-     * @param string $iban
-     *
+     * @param  string  $iban
      * @return string
      */
     public static function checksum(string $iban): string
@@ -53,8 +52,7 @@ class Iban
     /**
      * Converts letter to number.
      * 
-     * @param string $char
-     *
+     * @param  string  $char
      * @return int
      */
     public static function alphaToNumber(string $char): int
@@ -65,8 +63,7 @@ class Iban
     /**
      * Calculates mod97 on a numeric string.
      *
-     * @param string $number
-     *
+     * @param  string  $number
      * @return int
      */
     public static function mod97(string $number): int
@@ -83,8 +80,7 @@ class Iban
     /**
      * Checks whether an IBAN has a valid checksum.
      * 
-     * @param string $iban
-     *
+     * @param  string  $iban
      * @return bool
      */
     public static function isValid(string $iban): bool

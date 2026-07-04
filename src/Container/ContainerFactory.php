@@ -35,9 +35,8 @@ final class ContainerFactory
     /**
      * Adds an id for choose a key the list of definitions.
      * 
-     * @param string $id
-     * @param callable|object|string $definition
-     * 
+     * @param  string  $id
+     * @param  callable|object|string  $definition
      * @return static
      *
      * @throws InvalidArgumentException

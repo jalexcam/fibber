@@ -46,8 +46,7 @@ final class Container implements ContainerInterface
     /**
      * Constructor. Create a new Container instance.
      * 
-     * @param array<string, callable|object|string> $definitions
-     * 
+     * @param  array<string, callable|object|string>  $definitions
      * @return void
      */
     public function __construct(array $definitions)
@@ -58,8 +57,7 @@ final class Container implements ContainerInterface
     /**
      * Retrieve a definition from the container.
      *
-     * @param string $id
-     * 
+     * @param  string  $id
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -106,9 +104,8 @@ final class Container implements ContainerInterface
     /**
      * Get the service from a definition.
      *
-     * @param string $id
-     * @param callable|object|string $definition
-     * 
+     * @param  string  $id
+     * @param  callable|object|string  $definition 
      * @return mixed
      */
     private function getService(string $id, $definition)
@@ -149,8 +146,7 @@ final class Container implements ContainerInterface
     /**
      * Check if the container contains a given identifier.
      *
-     * @param string $id
-     * 
+     * @param  string  $id
      * @return bool
      *
      * @throws \InvalidArgumentException

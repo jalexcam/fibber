@@ -35,8 +35,7 @@ class Base
     /**
      * Constructor. Create a new Base instance.
      * 
-     * @param Generator $generator
-     * 
+     * @param  Generator  $generator
      * @return void
      */
     public function __construct(Generator $generator)
